@@ -11,7 +11,22 @@ In AR, every device lives in its own coordinate system. There is no shared groun
 On top of that, each user sees the environment from a different angle, so their plane detections differ: one phone might detect a table surface as two overlapping polygons, another as one large plane, and a third might miss it entirely.
 
 This project tackles both problems: **coordinate synchronization** and **surface deduplication**.
- 
+ ---
+
+## How It Works
+### Architecture
+
+```
+[Phone A]          [Phone B]
+   |                   |
+   └──── Mirror (TCP) ──┘
+              |
+           [Server/Host]
+         (plane filtering +
+          world map storage)
+```
+
+One device acts as host+client (no dedicated server required). All plane data flows through it.
 ### Surface Detection & Sharing
 
 - **ARFoundation + ARCore** handle plane detection on each device
@@ -66,6 +81,12 @@ When a new player connects, they request the current world map from the server v
 | Platform | Android (primary), iOS/iPhone 12 Pro (tested) |
 | Language | C# |
 | Algorithms | Winding Number (W.R. Franklin), Raycast PIP, Barycentric |
+
+##Showcase
+<img width="321" height="551" alt="image" src="https://github.com/user-attachments/assets/8a850057-7884-475c-96f8-4026e4cd7142" />
+Environment detection by an iPhone
+<img width="562" height="394" alt="image" src="https://github.com/user-attachments/assets/1bf2bb4d-af15-484c-8f07-2af8a2087667" />
+The detected planes on the server side
 
 
 
