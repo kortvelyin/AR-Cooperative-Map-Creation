@@ -82,11 +82,20 @@ When a new player connects, they request the current world map from the server v
 | Language | C# |
 | Algorithms | Winding Number (W.R. Franklin), Raycast PIP, Barycentric |
 
-##Showcase
-<img width="321" height="551" alt="image" src="https://github.com/user-attachments/assets/8a850057-7884-475c-96f8-4026e4cd7142" />
-Environment detection by an iPhone
-<img width="562" height="394" alt="image" src="https://github.com/user-attachments/assets/1bf2bb4d-af15-484c-8f07-2af8a2087667" />
-The detected planes on the server side
+---
+## Showcase
+
+| Client | Server |
+|---|---|
+| <img width="321" height="551" alt="image" src="https://github.com/user-attachments/assets/8a850057-7884-475c-96f8-4026e4cd7142" /> | <img width="562" height="394" alt="image" src="https://github.com/user-attachments/assets/1bf2bb4d-af15-484c-8f07-2af8a2087667" /> |
+| Environment detection by an iPhone | The detected planes on the server side |
+ 
+
+
+
+
+
+
 
 
 
